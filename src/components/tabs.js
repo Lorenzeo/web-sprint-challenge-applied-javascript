@@ -13,6 +13,22 @@ const Tabs = (topics) => {
   //   <div class="tab">technology</div>
   // </div>
   //
+
+  const topicsClass = document.createAttribute("div")
+  const tabOne = document.createAttribute("div")
+  const tabTwo = document.createAttribute("div")
+  const tabThree = document.createAttribute("div")
+
+  topicsClass.appendChild(tabOne);
+  topicsClass.appendChild(tabTwo);
+  topicsClass.appendChild(tabThree);
+
+  topicsClass.classList.add = "topics";
+  tabOne.classList.add = "tab";
+  tabTwo.classList.add = "tab";
+  tabThree.classList.add = "tab";
+
+
 }
 
 const tabsAppender = (selector) => {

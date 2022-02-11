@@ -15,18 +15,18 @@ const Header = (title, date, temp) => {
   //
 
   //creating elements
-const header = document.createAttribute("div")
+const headerClass = document.createAttribute("div")
 const span = document.createAttribute("span")
 const h1 = document.createAttribute("h1")
 const span2 = document.createAttribute("span")
   
   //assigning elements
-header.appendChild(span)
-header.appendChild(h1)
-header.appendChild(span2)
+headerClass.appendChild(span)
+headerClass.appendChild(h1)
+headerClass.appendChild(span2)
   
  //class names
-header.classList.add = "header";
+headerClass.classList.add = "header";
 span.classList.add = "date";
 span2.classList.add = "temp";
 
