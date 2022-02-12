@@ -1,4 +1,4 @@
-const Header = ({date, title, temp}) => {
+const Header = ({title, date, temp}) => {
   // TASK 1
   // ---------------------
   // Implement this function taking `title`, `date` and `temp` as its 3 args and returning the markup below.
@@ -30,9 +30,9 @@ spanDate.classList.add("date");
 spanTemp.classList.add("temp");
 
 //text content
-spanDate.textContent = `${date} `;
 h1title.textContent = `${title}`;
-spanTemp.textContent = `${temp} `;
+spanDate.textContent = `${date}`;
+spanTemp.textContent = `${temp}`;
 
 
 //return statement
