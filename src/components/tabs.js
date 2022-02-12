@@ -17,28 +17,38 @@ const Tabs = (topics) => {
   // </div>
   //
 
-  const topicsClass = document.createAttribute("div")
-  const tabOne = document.createAttribute("div")
-  const tabTwo = document.createAttribute("div")
-  const tabThree = document.createAttribute("div")
+  const topicsClass = document.createElement("div")
+  const tabOne = document.createElement("div")
+  const tabTwo = document.createElement("div")
+  const tabThree = document.createElement("div")
+  const tabFour = document.createElement("div")
+  const tabFive = document.createElement("div")
 
   topicsClass.appendChild(tabOne);
   topicsClass.appendChild(tabTwo);
   topicsClass.appendChild(tabThree);
+  topicsClass.appendChild(tabFour);
+  topicsClass.appendChild(tabFive);
 
   topicsClass.classList.add("topics");
   tabOne.classList.add("tab");
   tabTwo.classList.add("tab");
   tabThree.classList.add("tab");
+  tabFour.classList.add("tab");
+  tabFive.classList.add("tab");
 
   tabOne.textContent = `javascript`;
   tabTwo.textContent = `bootstrap`;
   tabThree.textContent = `technology`; 
-  
+  tabFour.textContent = `jquery`;
+  tabFive.textContent = 'node.js';
   
   //return statement
 return topicsClass
 }
+
+
+
 
 
 const tabsAppender = (selector) => {
@@ -54,7 +64,11 @@ const tabsAppender = (selector) => {
 
   axios.get(`http://localhost:5000/api/topics`)
    .then(resp =>{
-     console.log(resp.data.topics)
+     
+     const tabData = resp.data.topics
+     tabsDiv.appendChild(Tabs(tabData))
+    
+     
    })
    .catch(err => {
     console.error(err)
